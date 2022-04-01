@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    
+    <title>ATM</title>
+</head>
+<body class="bg-blue-700">
+    <div class="mx-24 my-16">
+        <div class="flex justify-evenly items-center">
+            <img src="/img/pin.png" alt="pin-img">
+
+            <div class="uppercase text-white text-4xl font-bold space-y-20">
+                <h1 class="text-center">masukan pin</h1>
+
+                <form action="" onsubmit="pin()">
+                    <input type="password" class="text-black px-2 rounded" id="angkapin" required>
+                    <input type="submit" value="ENTER">
+                </form>
+
+                <h1 class="text-center">tekan 'enter' jika selesai <br> memasukan pin</h1>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function pin() {
+        let pin = document.getElementById('angkapin').value;
+        if ( pin == 123456) {
+            window.open('pakettunai.html')
+            window.close()
+        } else {
+            alert('Pin yang anda masukan salah')
+        }
+    }
+</script>
+</html>
